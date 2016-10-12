@@ -1,0 +1,7 @@
+
+---
+# handlers file for ldap.login
+
+    - name: restart nslcd
+      service: name=nslcd state=restarted
+

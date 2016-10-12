@@ -1,0 +1,23 @@
+---
+# tasks file for ldap.login
+
+- apt: 
+    name: nslcd 
+    update_cache: yes
+    cache_valid_time: 3600
+
+
+- template: 
+    src: etc/nslcd.conf
+    dest: /etc/
+  notify: restart nslcd
+
+- template: 
+    src: etc/nsswitch.conf
+    dest: /etc/
+  notify: restart nslcd
+
+- template: 
+    src: etc/pam.d/common-session
+    dest: /etc/pam.d/
+  notify: restart nslcd
