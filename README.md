@@ -1,4 +1,4 @@
-Role Name
+LDAP PAM Client
 =========
 
 Role that deploys PAM connection to an LDAP server using LDAP bind. 
